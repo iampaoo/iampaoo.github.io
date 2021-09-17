@@ -1,14 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 * {
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 10px;
     background: #f1f1f1;
 }
 .icon{
     width: 3%;
-    /* height: 30px; */
+    min-height: 20px;
+    min-width: 20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.icon-ins{
+    max-width: 30px;
+    max-height: 30px;
+    min-height: 20px;
+    min-width: 20px;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
@@ -100,6 +111,7 @@ body{
 table{
     border-collapse: collapse;
     width: 100%;
+    overflow: auto;
 }
 th{
     padding: 10px;
@@ -120,11 +132,28 @@ td{
     height: auto;
     font-size: 1.25vw;
 }
+.Flex-table{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
 .font-head{
     font-size: 3vw;
 }
 .font-contain{
     font-size:1vw;
+}
+.list-ins{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+.list-ins img{
+    max-width: 25px;
+    margin-right: 10px;
 }
 /* li{
     margin: 20px;
@@ -185,7 +214,7 @@ td{
     color: #ff8800;
     font-weight: 400;
 }
-.action .menu ul li{
+.list-content{
     list-style: none;
     padding: 10px 0;
     border-top: 1px solid rgba(0,0,0,0.05);
@@ -220,4 +249,235 @@ td{
 }
 .rightcolumn .card div:hover .show{
     display: block;
+} */
+.bg{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    background: #98C1D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.container .left-side{
+    position: relative;
+    background: #D06311;
+    padding: 40px;
+}
+.profiletext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: px; */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profiletext .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profiletext .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.profiletext h2{
+    color: #fff;
+    font-size: 1em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profiletext h2 span{
+    font-size: 0.6em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 10px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul{
+    position: relative;
+
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+.contactInfo ul li .iconinfo img{
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+.zeromargin{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.contactInfo.education h5{
+    color: #12355B;
+    font-weight: 700;
+}
+.contactInfo.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #474954;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #F6F5AE;
+}
+.contactInfo.language span{
+    font-weight: 500;
+}
+
+.container .right-side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about{
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #D06311;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.contain-profile{
+    color: #333;
+}
+.about .Box{
+    display: flex;
+    flex-direction: row;
+}
+.about .Box .year{
+    min-width: 150px;
+
+}
+.about .Box .year h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .Box .text h4{
+    text-transform: uppercase;
+    color: #4289B3;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.about.skill .Box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.about.skill .Box h4{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+.about.skill .Box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.about.skill .Box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.about.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.about.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+
+}
+.about.interest ul li img{
+    width: 20px;
+    margin-right: 5px;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about.interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px){
+    .about .Box{
+        flex-direction: column;
+    }
+    .about .Box .year{
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+    .about.interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about.skill .Box{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
