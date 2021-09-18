@@ -107,6 +107,21 @@ body{
       float: none;
       width: 100%;
     }
+    .leftcolumn .card p{
+        font-size: 0.8em;
+    }
+    .leftcolumn .card h1{
+        font-size: 1em;
+    }
+    .header h2{
+        font-size: 1em;
+    }
+    .column-center .card h1{
+        font-size: 1em;
+    }
+    .row .right-halfcolum .card .experience ul{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 table{
     border-collapse: collapse;
@@ -130,7 +145,14 @@ td{
     justify-content: center;
     align-items: center;
     height: auto;
-    font-size: 1.25vw;
+    font-size: 1em;
+}
+.Flexbox-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-size: 2em;
 }
 .Flex-table{
     display: flex;
@@ -139,7 +161,8 @@ td{
     height: auto;
 }
 .font-head{
-    font-size: 3vw;
+    font-size: 2em;
+
 }
 .font-contain{
     font-size:1vw;
@@ -154,6 +177,18 @@ td{
 .list-ins img{
     max-width: 25px;
     margin-right: 10px;
+}
+.right-halfcolum .card .experience ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0;
+}
+.right-halfcolum .card .experience ul li{
+    list-style: none;
+}
+.right-halfcolum .card .experience ul li img{
+    width: 95%;
+    border-radius: 15px;
 }
 /* li{
     margin: 20px;
