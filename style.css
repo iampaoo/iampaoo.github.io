@@ -102,7 +102,7 @@ body{
       padding: 0;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .topnav a {
       float: none;
       width: 100%;
@@ -120,6 +120,9 @@ body{
         font-size: 1em;
     }
     .row .right-halfcolum .card .experience ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .row .column-center .card .education-contant ul{
         grid-template-columns: repeat(1,1fr);
     }
 }
@@ -155,10 +158,33 @@ td{
     font-size: 2em;
 }
 .Flex-table{
-    display: flex;
+    display:flex;
     justify-content: flex-start;
     align-items: center;
     height: auto;
+}
+.row .column-center .card h3{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.column-center .card .education-contant ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 20px;
+}
+.column-center .card .education-contant ul li{
+    list-style: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.column-center .card .education-contant ul li span{
+    padding-left: 20px;
+}
+.column-center .card .education-contant ul li img{
+    width: 25%;
 }
 .font-head{
     font-size: 2em;
