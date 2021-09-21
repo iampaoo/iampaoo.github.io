@@ -92,7 +92,6 @@ body{
     width: 60%;
 }
 .img-Education{
-    /* height: auto; */
     width: 100%;
     height: 300px;
 }
@@ -143,7 +142,7 @@ tr{
 td{
     padding: 10px;
 }
-.Flexbox-Centering{
+.row .leftcolumn .card p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,19 +189,16 @@ td{
     font-size: 2em;
 
 }
-.font-contain{
-    font-size:1vw;
+.rightcolumn .card ul li img{
+    max-width: 25px;
+    margin-right: 10px;
 }
-.list-ins{
+.row .left-halfcolum .card ul li, .rightcolumn .card ul li{
     list-style: none;
     padding: 10px 0;
     border-top: 1px solid rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
-}
-.list-ins img{
-    max-width: 25px;
-    margin-right: 10px;
 }
 .right-halfcolum .card .experience ul{
     display: grid;
@@ -216,17 +212,8 @@ td{
     width: 95%;
     border-radius: 15px;
 }
-/* li{
-    margin: 20px;
-} */
-/* .action{
-    position:absolute;
-    top: 40%;
-    right: 30%;
-    background-color: #f1f1f1;
-} */
+/*  */
 .action .contact{
-    /* position: relative; */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -234,19 +221,13 @@ td{
     cursor: pointer;
 }
 .action .contact img {
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* float: right; */
 }
 .action .menu {
-    /* position: absolute; */
-    /* top: 120px;
-    right: -10px;
-    padding: 10px 20px; */
     background: #fceccb;
     width: 100%;
     box-sizing: 0 5px 25px rgba(0,0,0,0.1);
@@ -281,7 +262,6 @@ td{
     border-top: 1px solid rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 .action .menu ul li img{
     max-width: 20px;
@@ -295,22 +275,15 @@ td{
 .action .menu ul li a{
     display: inline-block;
     text-decoration: none;
-    color: rgb(177, 71, 0);
+    color: #8C7051;
     font-weight: 500;
     transition: 0.5s;
 }
 .action .menu ul li:hover a{
-    color: rgb(255, 94, 0);
-
+    color: #EF3054;
+    font-weight: 600;
 }
-/* .show{
-    display: none;
-    background-color: yellow;
-    padding: 20px;
-}
-.rightcolumn .card div:hover .show{
-    display: block;
-} */
+/*  */
 .bg{
     margin: 0;
     padding: 0;
@@ -335,7 +308,7 @@ td{
 }
 .container .left-side{
     position: relative;
-    background: #D06311;
+    background: #E76F51;
     padding: 40px;
 }
 .profiletext{
@@ -343,7 +316,6 @@ td{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: px; */
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .profiletext .imgBx{
@@ -383,21 +355,24 @@ td{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 .contactInfo ul{
     position: relative;
-
 }
 .contactInfo ul li{
     position: relative;
     list-style: none;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
 }
 .contactInfo ul li .iconinfo img{
     display: inline-block;
     width: 20px;
     font-size: 18px;
+    margin-right: 10px;
 }
 .contactInfo ul li span{
     color: #fff;
@@ -408,37 +383,48 @@ td{
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.contactInfo.education h5{
+.contactInfo-education ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    
+}
+.contactInfo-education h5{
     color: #12355B;
     font-weight: 700;
 }
-.contactInfo.education h4:nth-child(2){
+.contactInfo-education h4:nth-child(2){
     color: #fff;
     font-weight: 500;
 }
-.contactInfo.education h4{
+.contactInfo-education h4{
     color: #fff;
     font-weight: 300;
 }
-.contactInfo.language .percent{
+.contactInfo-language ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+.contactInfo-language .percent{
     position: relative;
     width: 100%;
     height: 6px;
-    background: #474954;
+    background: #264653;
     display: block;
     margin-top: 5px;
 }
-.contactInfo.language .percent div{
+.contactInfo-language .percent div{
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    background: #F6F5AE;
+    background: #E9C46A;
 }
-.contactInfo.language span{
+.contactInfo-language span{
     font-weight: 500;
+    color: #12355B;
 }
-
 .container .right-side{
     position: relative;
     background: #fff;
@@ -451,7 +437,7 @@ td{
     margin-bottom: 0;
 }
 .title2{
-    color: #D06311;
+    color: #E76F51;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -465,7 +451,6 @@ td{
 }
 .about .Box .year{
     min-width: 150px;
-
 }
 .about .Box .year h5{
     text-transform: uppercase;
@@ -502,7 +487,7 @@ td{
     top: 0;
     left: 0;
     height: 100%;
-    background: #03a9f4;
+    background: #E9C46A;
 }
 .about.interest ul{
     display: grid;
@@ -512,7 +497,8 @@ td{
     list-style: none;
     color: #333;
     font-weight: 500;
-
+    display: flex;
+    align-items: center;
 }
 .about.interest ul li img{
     width: 20px;
