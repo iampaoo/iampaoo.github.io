@@ -201,6 +201,11 @@ td{
     width: 95%;
     border-radius: 15px;
 }
+.color-skill{
+    font-weight: 500;
+    margin-top: 0;
+    color: #E4833A;
+}
 /* PAGE contact */
 .action .contact{
     width: 60px;
